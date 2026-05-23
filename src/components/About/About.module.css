@@ -1,0 +1,171 @@
+.about {
+  padding: 130px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.aboutVisual {
+  position: relative;
+}
+
+.aboutCard {
+  background: var(--champagne);
+  height: 520px;
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutCardInner {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, var(--rose-light), var(--champagne-dark));
+}
+
+.aboutPattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--rose) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.2;
+}
+
+.aboutFloat {
+  position: absolute;
+  right: -30px;
+  bottom: 40px;
+  background: var(--ivory);
+  padding: 28px 36px;
+  box-shadow: 0 20px 60px var(--shadow);
+  min-width: 200px;
+}
+
+.aboutFloat strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--rose-deep);
+  line-height: 1;
+}
+
+.aboutFloat p {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--taupe);
+  margin-top: 6px;
+}
+
+.aboutLine {
+  position: absolute;
+  top: 40px;
+  right: -30px;
+  width: 80px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.aboutContent {
+  padding-left: 20px;
+}
+
+.sectionLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.sectionLabel span {
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--rose-deep);
+}
+
+.sectionLabel::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: var(--rose);
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.5vw, 3.2rem);
+  font-weight: 300;
+  line-height: 1.2;
+  color: var(--dark);
+  margin-bottom: 28px;
+}
+
+.sectionTitle em {
+  font-style: italic;
+  color: var(--rose-deep);
+}
+
+.aboutText {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: var(--taupe);
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.pillar {
+  padding: 20px;
+  border: 1px solid var(--rose-light);
+  transition: all 0.35s;
+}
+
+.pillar:hover {
+  border-color: var(--rose);
+  background: var(--champagne);
+  transform: translateY(-3px);
+}
+
+.pillarIcon {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.pillar h4 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 6px;
+}
+
+.pillar p {
+  font-size: 0.75rem;
+  color: var(--taupe);
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .about {
+    grid-template-columns: 1fr;
+    padding: 80px 30px;
+    gap: 50px;
+  }
+  .aboutContent {
+    padding-left: 0;
+  }
+  .aboutCard {
+    height: 300px;
+  }
+  .aboutFloat {
+    right: 0;
+  }
+}

@@ -1,0 +1,28 @@
+.marqueeWrap {
+  overflow: hidden;
+  background: var(--dark);
+  padding: 18px 0;
+}
+
+.marquee {
+  display: flex;
+  animation: marqueeScroll 20s linear infinite;
+  white-space: nowrap;
+}
+
+.marquee span {
+  font-size: 0.65rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--champagne);
+  padding: 0 32px;
+  opacity: 0.7;
+}
+
+.dot {
+  color: var(--gold) !important;
+  opacity: 1 !important;
+  font-size: 0.5rem !important;
+  vertical-align: middle;
+  margin-left: 32px;
+}

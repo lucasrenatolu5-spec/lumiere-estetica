@@ -1,0 +1,136 @@
+.testimonials {
+  background: var(--dark);
+  padding: 130px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionLabel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.sectionLabel span {
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--rose);
+}
+
+.sectionLabel::after {
+  content: '';
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: var(--rose);
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: var(--champagne);
+}
+
+.sectionTitle em {
+  font-style: italic;
+  color: var(--rose);
+}
+
+.testimonialsTrack {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 70px;
+}
+
+.testimonialCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 160, 160, 0.12);
+  padding: 40px 32px;
+  text-align: left;
+  position: relative;
+  transition: all 0.4s;
+}
+
+.testimonialCard:hover {
+  background: rgba(201, 160, 160, 0.08);
+  border-color: rgba(201, 160, 160, 0.25);
+  transform: translateY(-6px);
+}
+
+.quoteMark {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  line-height: 0.5;
+  color: var(--rose);
+  opacity: 0.4;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.testimonialText {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: rgba(240, 222, 222, 0.85);
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.authorAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--rose), var(--rose-deep));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: white;
+  flex-shrink: 0;
+}
+
+.authorInfo strong {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--champagne);
+  margin-bottom: 2px;
+}
+
+.authorInfo small {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: var(--rose);
+  text-transform: uppercase;
+}
+
+.stars {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  color: var(--gold);
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 1024px) {
+  .testimonials {
+    padding: 80px 30px;
+  }
+  .testimonialsTrack {
+    grid-template-columns: 1fr;
+  }
+}
