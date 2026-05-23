@@ -1,3 +1,28 @@
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+ 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+ 
+@keyframes float1 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(15deg); }
+}
+ 
+@keyframes float2 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(20px) rotate(-10deg); }
+}
+ 
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+ 
 .hero {
   min-height: 100vh;
   display: grid;
@@ -5,7 +30,7 @@
   position: relative;
   overflow: hidden;
 }
-
+ 
 .heroLeft {
   display: flex;
   flex-direction: column;
@@ -14,7 +39,7 @@
   position: relative;
   z-index: 2;
 }
-
+ 
 .heroBadge {
   display: inline-flex;
   align-items: center;
@@ -23,14 +48,14 @@
   opacity: 0;
   animation: fadeUp 0.8s ease 0.3s forwards;
 }
-
+ 
 .heroBadge span {
   font-size: 0.65rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--taupe);
 }
-
+ 
 .heroBadge::before {
   content: '';
   display: block;
@@ -38,7 +63,7 @@
   height: 1px;
   background: var(--rose);
 }
-
+ 
 .heroTitle {
   font-family: var(--font-display);
   font-size: clamp(3.2rem, 5vw, 5rem);
@@ -49,13 +74,13 @@
   opacity: 0;
   animation: fadeUp 0.9s ease 0.5s forwards;
 }
-
+ 
 .heroTitle em {
   font-style: italic;
   color: var(--rose-deep);
   display: block;
 }
-
+ 
 .heroDesc {
   font-size: 0.9rem;
   line-height: 1.8;
@@ -66,7 +91,7 @@
   opacity: 0;
   animation: fadeUp 0.9s ease 0.7s forwards;
 }
-
+ 
 .heroActions {
   display: flex;
   gap: 20px;
@@ -74,7 +99,7 @@
   opacity: 0;
   animation: fadeUp 0.9s ease 0.9s forwards;
 }
-
+ 
 .btnPrimary {
   display: inline-flex;
   align-items: center;
@@ -92,7 +117,7 @@
   position: relative;
   overflow: hidden;
 }
-
+ 
 .btnPrimary::before {
   content: '';
   position: absolute;
@@ -101,25 +126,25 @@
   transform: translateX(-100%);
   transition: transform 0.35s ease;
 }
-
+ 
 .btnPrimary:hover::before {
   transform: translateX(0);
 }
-
+ 
 .btnPrimary span,
 .btnPrimary svg {
   position: relative;
   z-index: 1;
 }
-
+ 
 .btnPrimary svg {
   transition: transform 0.3s;
 }
-
+ 
 .btnPrimary:hover svg {
   transform: translateX(4px);
 }
-
+ 
 .btnGhost {
   font-size: 0.75rem;
   letter-spacing: 0.1em;
@@ -129,42 +154,41 @@
   padding-bottom: 2px;
   transition: all 0.3s;
 }
-
+ 
 .btnGhost:hover {
   color: var(--dark);
   border-color: var(--rose);
 }
-
-/* RIGHT SIDE */
+ 
 .heroRight {
   position: relative;
   overflow: hidden;
 }
-
+ 
 .heroImgWrap {
   position: absolute;
   inset: 0;
   overflow: hidden;
 }
-
+ 
 .heroImgBg {
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, var(--rose-light) 0%, var(--champagne-dark) 50%, var(--rose) 100%);
 }
-
+ 
 .heroShapes {
   position: absolute;
   inset: 0;
   overflow: hidden;
 }
-
+ 
 .shapeCircle {
   position: absolute;
   border-radius: 50%;
   opacity: 0.15;
 }
-
+ 
 .shape1 {
   width: 400px;
   height: 400px;
@@ -173,7 +197,7 @@
   right: -100px;
   animation: float1 8s ease-in-out infinite;
 }
-
+ 
 .shape2 {
   width: 200px;
   height: 200px;
@@ -182,7 +206,7 @@
   left: 60px;
   animation: float2 10s ease-in-out infinite;
 }
-
+ 
 .shape3 {
   width: 100px;
   height: 100px;
@@ -191,13 +215,13 @@
   right: 15%;
   animation: float1 6s ease-in-out infinite reverse;
 }
-
+ 
 .heroImgOverlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to right, var(--ivory) 0%, transparent 20%);
 }
-
+ 
 .heroTag {
   position: absolute;
   bottom: 60px;
@@ -209,7 +233,7 @@
   opacity: 0;
   animation: fadeUp 0.8s ease 1.2s forwards;
 }
-
+ 
 .heroTag strong {
   display: block;
   font-family: var(--font-display);
@@ -217,14 +241,14 @@
   font-weight: 400;
   color: var(--dark);
 }
-
+ 
 .heroTag small {
   font-size: 0.65rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--taupe);
 }
-
+ 
 .heroScroll {
   position: absolute;
   bottom: 40px;
@@ -237,7 +261,7 @@
   opacity: 0;
   animation: fadeIn 1s ease 1.5s forwards;
 }
-
+ 
 .heroScroll span {
   font-size: 0.6rem;
   letter-spacing: 0.3em;
@@ -245,14 +269,14 @@
   color: var(--taupe);
   writing-mode: vertical-rl;
 }
-
+ 
 .scrollLine {
   width: 1px;
   height: 50px;
   background: linear-gradient(to bottom, var(--rose), transparent);
   animation: scrollPulse 2s ease infinite;
 }
-
+ 
 @media (max-width: 1024px) {
   .hero {
     grid-template-columns: 1fr;
