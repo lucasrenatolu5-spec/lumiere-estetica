@@ -1,13 +1,23 @@
 .marqueeWrap {
+  width: 100%;
   overflow: hidden;
   background: var(--dark);
   padding: 18px 0;
+  position: relative;
 }
 
 .marquee {
   display: flex;
-  animation: marqueeScroll 20s linear infinite;
+  align-items: center;
+
+  width: max-content;
+  min-width: 100%;
+
   white-space: nowrap;
+  flex-shrink: 0;
+
+  animation: marqueeScroll 20s linear infinite;
+  will-change: transform;
 }
 
 .marquee span {
@@ -17,6 +27,8 @@
   color: var(--champagne);
   padding: 0 32px;
   opacity: 0.7;
+
+  flex-shrink: 0;
 }
 
 .dot {
@@ -25,4 +37,32 @@
   font-size: 0.5rem !important;
   vertical-align: middle;
   margin-left: 32px;
+
+  flex-shrink: 0;
+}
+
+@keyframes marqueeScroll {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee {
+    animation-duration: 14s;
+  }
+
+  .marquee span {
+    font-size: 0.55rem;
+    padding: 0 20px;
+    letter-spacing: 0.2em;
+  }
+
+  .dot {
+    margin-left: 20px;
+  }
 }
